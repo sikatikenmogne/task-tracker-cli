@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "task-cli"
+version = "0.1.0"
+description = "A CLI tool for task tracking"
+authors = ["Samuel SIKATI KENMOGNE <sikatikenmogne@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/sikatikenmogne/task-tracker-cli"
+repository = "https://github.com/sikatikenmogne/task-tracker-cli"
+keywords = ["cli", "task", "tracker"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+typer = "^0.4.0"
+typing_extensions = "^4.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[tool.poetry.scripts]
+task-cli = "task_cli.cli:app"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
