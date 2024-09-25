@@ -26,14 +26,14 @@ class Task:
         update task description
         """
         self.__description = description
-        self.__updated_at = datetime.datetime.now()
+        self.__updated_at = datetime.datetime.now().isoformat()
         
     def set_status(self, status: str):
         """
         update task status
         """
         self.__description = status
-        self.__updated_at = datetime.datetime.now()
+        self.__updated_at = datetime.datetime.now().isoformat()
 
     def to_dict(self):
         return {

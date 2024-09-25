@@ -27,12 +27,26 @@ def add(name: Annotated[str, typer.Argument(default="New Task", help="Name of th
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump([t.to_dict() for t in task_list], f, ensure_ascii=False, indent=4)
     
-    typer.echo(f"Task '{name}' added.")
+    typer.echo(f"Task added successfully (ID: {new_id + 1})")
 
 def update(id: Annotated[int, typer.Argument(default=0, help="ID of the task")], name: Annotated[str, typer.Argument(default="Updated Task", help="New name of the task")]):
+    load_tasks()  # Load existing tasks
+    
+    task_list[id - 1].set_description(description=name) 
+
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump([t.to_dict() for t in task_list], f, ensure_ascii=False, indent=4)
+    
     typer.echo(f"Task {id} updated to '{name}'.")
 
 def delete(id: Annotated[int, typer.Argument(default=0, help="ID of the task")]):
+    load_tasks()
+    
+    del task_list[id - 1]
+    
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump([t.to_dict() for t in task_list], f, ensure_ascii=False, indent=4)
+    
     typer.echo(f"Task {id} deleted.")
 
 def mark_in_progress(id: Annotated[int, typer.Argument(default=0, help="ID of the task")]):
