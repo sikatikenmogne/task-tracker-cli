@@ -17,3 +17,6 @@ build/
 
 # Vscode
 .vscode/
+
+# JSON data
+data.json

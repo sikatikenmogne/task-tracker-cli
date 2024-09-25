@@ -1,6 +1,6 @@
 import typer
 
-from .task import add, update, delete, mark_done, list, mark_in_progress
+from .task_manager import add, update, delete, mark_done, list, mark_in_progress
 
 app = typer.Typer()
 
