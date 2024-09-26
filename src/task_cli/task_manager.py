@@ -50,9 +50,24 @@ def delete(id: Annotated[int, typer.Argument(default=0, help="ID of the task")])
     typer.echo(f"Task {id} deleted.")
 
 def mark_in_progress(id: Annotated[int, typer.Argument(default=0, help="ID of the task")]):
+    load_tasks()
+    
+    task_list[id - 1].set_status('in-progress')
+    
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump([t.to_dict() for t in task_list], f, ensure_ascii=False, indent=4)
+    
     typer.echo(f"Task {id} marked as in progress.")
 
 def mark_done(id: Annotated[int, typer.Argument(default=0, help="ID of the task")]):
+    load_tasks()
+    
+    if task_list[id - 1].get_status() != 'done':
+        task_list[id - 1].set_status('done')
+        
+        with open('data.json', 'w', encoding='utf-8') as f:
+            json.dump([t.to_dict() for t in task_list], f, ensure_ascii=False, indent=4)
+
     typer.echo(f"Task {id} marked as done.")
 
 def list(name: Annotated[str, typer.Argument(default="all", help="Name of the task to list")]):

@@ -10,13 +10,13 @@ class Task:
         self.__updated_at = updated_at if updated_at else datetime.datetime.now().isoformat()
         
     def get_description(self):
-        return self.__description()
+        return self.__description
     
     def get_status(self):
-        return self.__status()
+        return self.__status
     
     def get_created_at(self):
-        return self.__created_at()
+        return self.__created_at
     
     def get_id(self):
         return self.__id
@@ -32,7 +32,7 @@ class Task:
         """
         update task status
         """
-        self.__description = status
+        self.__status = status
         self.__updated_at = datetime.datetime.now().isoformat()
 
     def to_dict(self):
