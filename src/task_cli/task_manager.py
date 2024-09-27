@@ -70,5 +70,14 @@ def mark_done(id: Annotated[int, typer.Argument(default=0, help="ID of the task"
 
     typer.echo(f"Task {id} marked as done.")
 
-def list(name: Annotated[str, typer.Argument(default="all", help="Name of the task to list")]):
-    typer.echo(f"Listing tasks with name '{name}'.")
+def list(status: Annotated[str, typer.Argument(default=None, help="Status of the tasks to list")] = None):
+    load_tasks()
+    
+    if status:
+        filtered_tasks = [task for task in task_list if task.get_status() == status]
+    else:
+        filtered_tasks = task_list
+    
+    for task in filtered_tasks:
+        typer.echo(f"{task.get_id()}: {task.get_description()} [{task.get_status()}]")
+

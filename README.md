@@ -12,10 +12,10 @@ The application should run from the command line, accept user actions and inputs
 
 - [x] Add, Update, and Delete tasks
 - [x] Mark a task as in progress or done
-- [ ] List all tasks
-- [ ] List all tasks that are done
-- [ ] List all tasks that are not done
-- [ ] List all tasks that are in progress
+- [x] List all tasks
+- [x] List all tasks that are done
+- [x] List all tasks that are not done
+- [x] List all tasks that are in progress
 
 Here are some constraints to guide the implementation:
 
@@ -83,7 +83,7 @@ Here are a few steps to help you get started with the Task Tracker CLI project:
 ### Implementing Features
 
 - [x] Start by creating a basic CLI structure to handle user inputs.
-- [ ] Implement each feature one by one, ensuring to test thoroughly before moving to the next e.g. implement adding task functionality first, listing next, then updating, marking as in progress, etc.
+- [x] Implement each feature one by one, ensuring to test thoroughly before moving to the next e.g. implement adding task functionality first, listing next, then updating, marking as in progress, etc.
 
 ### Testing and Debugging
 
@@ -92,6 +92,6 @@ Here are a few steps to help you get started with the Task Tracker CLI project:
 
 ### Finalizing the Project
 
-- [ ] Ensure all features are implemented and tested.
+- [x] Ensure all features are implemented and tested.
 - [ ] Clean up your code and add comments where necessary.
 - [ ] Write a good readme file on how to use your Task Tracker CLI.
