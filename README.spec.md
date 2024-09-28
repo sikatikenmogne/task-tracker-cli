@@ -83,11 +83,11 @@ Here are a few steps to help you get started with the Task Tracker CLI project:
 
 ## Testing and Debugging
 
-- [ ] Test each feature individually to ensure they work as expected. Look at the JSON file to verify that the tasks are being stored correctly.
-- [ ] Debug any issues that arise during development.
+- [x] Test each feature individually to ensure they work as expected. Look at the JSON file to verify that the tasks are being stored correctly.
+- [x] Debug any issues that arise during development.
 
 ## Finalizing the Project
 
 - [x] Ensure all features are implemented and tested.
-- [ ] Clean up your code and add comments where necessary.
-- [ ] Write a good readme file on how to use your Task Tracker CLI.
+- [x] Clean up your code and add comments where necessary.
+- [x] Write a good readme file on how to use your Task Tracker CLI.
