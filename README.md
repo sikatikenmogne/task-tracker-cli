@@ -2,6 +2,8 @@
 
 Task Tracker CLI is a command-line application built with Python and Typer to help you manage your tasks efficiently.
 
+This project is part of the [roadmap.sh](https://roadmap.sh/projects/task-tracker) Backend project beginner level.
+
 ## Features
 
 - [x] Add, Update, and Delete tasks
@@ -171,3 +173,16 @@ To contribute to this project, follow these steps:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Ressource
+
+- https://packaging.python.org/en/latest/guides/creating-command-line-tools/
+- https://clig.dev/
+    - https://clig.dev/#the-basics
+- https://github.com/fastapi/typer
+- https://packaging.python.org/en/latest/guides/installing-stand-alone-command-line-tools/#installing-stand-alone-command-line-tools
+- https://www.geeksforgeeks.org/file-handling-python/
+- https://stackoverflow.com/questions/12309269/how-do-i-write-json-data-to-a-file
+- https://blogboard.io/blog/knowledge/how-to-write-a-list-to-a-file-in-python/
+- https://docs.python.org/3/library/json.html#module-json
+- https://roadmap.sh/projects/task-tracker
